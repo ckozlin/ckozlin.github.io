@@ -3,7 +3,7 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/mountain2.jpg') {
-        myImage.setAttribute('src', 'images/mcpherson.jpg');
+        myImage.setAttribute('src', 'images/kesemheadshot.jpg');
     } else {
         myImage.setAttribute('src', 'images/mountain2.jpg');
     }

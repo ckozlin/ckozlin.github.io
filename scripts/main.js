@@ -14,7 +14,7 @@ myButton.onclick = function() {
     setUserName();
 }
 
-let myHeading = document.querySelector('h2');
+let myHeading = document.querySelector('#top');
 
 function setUserName() {
     let myName = prompt('Please enter your name.');
@@ -22,7 +22,7 @@ function setUserName() {
         setUserName();
     } else {
         localStorage.setItem('name', myName);
-        myHeading.textContent = 'Welcome to my website, ' + myName + '!';
+        myHeading.textContent = 'Welcome to my online portfolio, ' + myName + '!';
     }
 }
 
@@ -30,5 +30,5 @@ if (!localStorage.getItem('name')) {
     setUserName();
 }   else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Welcome to my website, ' + storedName + '!';
+    myHeading.textContent = 'Welcome to my online portfolio, ' + storedName + '!';
 }

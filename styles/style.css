@@ -13,21 +13,28 @@ body {
 }
 
 h1 {
-    margin: 0;
-    padding: 20px 0;
     color:#D072FC;
-    /* text-shadow: 3px 3px 1px black; */
-    font-size: 60px;
+    margin: 0 auto;
+    font-size: 50px;
     text-align: center;
 }
 
-h2 {
+#top {
     text-align: center;
-    font-size: 40px;
+    margin: 0;
+    font-size: 20px;
+}
+
+#about-me {
+    text-align: center;
+    background-color: black;
+    color:white;
+    border: 2px dashed darkblue;
+    font-size: 20px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size: 20px;
     text-align: center
 }
 
@@ -47,4 +54,10 @@ img {
 
 #image-title {
     color: red
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid black;
 }

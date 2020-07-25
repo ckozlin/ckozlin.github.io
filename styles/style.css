@@ -16,7 +16,7 @@
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 80px;
     padding-top: 50px;
     padding-bottom: 25px;
     font-family: 'Slabo 27px', serif;
@@ -39,7 +39,7 @@ h1 {
 }
 
 .kesem-pic {
-    height: 200px;
+    height: 300px;
     border-radius: 10px;
     border: 2px solid black;
     margin: 20px;
@@ -78,4 +78,15 @@ ul {
 
 .button:active {
     background-color: #97caef;
+}
+
+.link {
+    text-decoration: none;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #bf80ff;
 }

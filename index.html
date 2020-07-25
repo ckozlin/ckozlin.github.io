@@ -4,26 +4,65 @@
         <meta charset="utf-8">
         <title>Cameron J Kozlin</title>
         <link href="styles/style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">  
     </head>
     <body>
-        <p id="top"><strong>Welcome to my online portfolio!</strong></p>
-        <button>Change name</button>
-        <h2 id="about-me">About Me</h2>
-        <h1>Cameron J Kozlin</h1>
-        <h3>Computer Science major at the University of Florida</h3>
-        <p id="image-title"><strong>Try clicking on the image!</strong></p>
-        <img src="images/kesemheadshot.jpg" alt="Picture of Cameron Kozlin">
-        <p><strong>Bio:</strong></p>
+        <div class="container">
+            <div class="page">
+                <h1 class="title">Cameron J. Kozlin</h1>
+                <div class="menu-container">
+                    <a class="button about-me" href="#about-me">About Me</a>
+                    <a class="button involvement" href="#involvement">Involvement</a>
+                    <a class="button skills" href="#skills">Skills</a>
+                    <a class="button github" href="#github">GitHub</a>
+                </div>
+                
+                <img class="kesem-pic" src="images/kesemheadshot.jpg" alt="Headshot of Cameron Kozlin">
 
-        <ul>
-            <li>I am well-versed in Java, Python, and C++</li>
-            <li>I have contributed to research in the field of Computer Science, including being published as a co-author for my contributions to 
-                <a href="https://ieeexplore.ieee.org/abstract/document/9090481">this study</a></li>
-            <li>Volunteer for <a href="https://www.bme.ufl.edu/labs/grip/">GRiP</a>, a student-run organization that designs and prints prosthetics</li>
-            <li>Counselor for <a href="https://www.campkesem.org/">Camp Kesem</a> UF, a free annual summer camp for children who have been impacted by a parent's cancer</li>
-        </ul>
+                <h2 id="about-me">About Me</h2>
+                <p>
+                    I'm a second year at the University of Florida, majoring in Computer Science with a minor in Spanish.
+                    As I practice my Web Development skills, I am making this website to serve as my online portfolio,
+                    and I plan to update it regularly as I learn how to apply new concepts.
+                </p>
+                <p>
+                    And, as you may be able to tell by looking at this website, blue is my favorite color.
+                </p>
 
-        <script src="scripts/main.js"></script>
+                <h2 id="involvement">Involvement</h2>
+                <ul>
+                    <li>
+                        Counselor for Camp Kesem UF, an organization that holds an annual Summer camp for children whose lives
+                        are affected by a parent's cancer
+                    </li>
+                    <li>
+                        Member of General Releif in Prosthetics (GRiP), a club that designes and 3-D prints prosthetics for children
+                    </li>
+                    <li>
+                        I have contributed to research in the field of Computer Science, and was published as a co-author 
+                        in <a href="https://ieeexplore.ieee.org/abstract/document/9090481">this study</a>
+                    </li>
+                </ul>
+
+                <h2 id="skills">Skills</h2>
+                <ul>
+                    <li>
+                        Proficient in C++, Java, and Python
+                    </li>
+                    <li>
+                        Learning front-end languages such as HTML, CSS, and JavaScript in my spare time (hence the website)
+                    </li>
+                    <li>
+                        Always ready to learn new languages, libraries, and programming concepts!
+                    </li>
+                </ul>
+                
+                <h2 id="github">GitHub</h2>
+                <p class="bottom-of-page"><a href="https://github.com/ckozlin">Here</a> is a link to my GitHub account. Check it out!</p>
+                <!-- <script src="scripts/main.js"></script> -->
+            </div>
+        </div>
     </body>
 </html>

@@ -1,5 +1,5 @@
 /* MOBILE FIRST DEVELOPMENT */
-/* Want buttons ti stretch across screen and form column instead of row- use flexbox for later modes */
+/* Want buttons to stretch across screen and form column instead of row- use flexbox for later modes */
 * {
   margin: 0;
   padding: 0;
@@ -14,18 +14,20 @@
   position: absolute;
 }
 
-.logo-container {
+.logo-box {
   display: flex;
   position: relative;
   height: 30px;
   margin-bottom: 20px;
   width: 300px;
+  margin: auto;
 
   align-items: center;
+  background-color: #fff;
 }
 
 .page {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -50,7 +52,8 @@
 }
 
 .kesem-pic {
-  height: 300px;
+  width: 200px;
+  margin: auto;
   border-radius: 10px;
   border: 2px solid black;
   margin: 20px;
@@ -125,7 +128,7 @@ h1 {
 /* DESKTOP MODE */
 @media only screen and (min-width: 961px) {
   .button {
-    width: 23%;
+    width: 24%;
     height: 100px;
     align-items: center;
     flex-direction: row;

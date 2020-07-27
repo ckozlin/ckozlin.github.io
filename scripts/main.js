@@ -8,7 +8,7 @@ function move() {
   if (right) {
     pos += 1;
     gatorLogo.style.left = pos + "px";
-    if (pos == 260) {
+    if (pos == 240) {
       right = false;
     }
   } else {

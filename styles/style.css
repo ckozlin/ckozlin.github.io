@@ -49,6 +49,8 @@
   margin: 10px;
   background-color: #97caef;
   border-radius: 15px;
+
+  transition: all 1s ease;
 }
 
 .kesem-pic {

@@ -1,8 +1,21 @@
+/* Banner image animation */
+
 let gatorLogo = document.querySelector("#gator-logo");
 
-var t = setInterval(move, 15);
-var pos = 0;
-var right = true;
+let t = setInterval(move, 15);
+let pos = 0;
+let right = true;
+let clicked = false;
+
+gatorLogo.onclick = function () {
+  if (clicked) {
+    t = setInterval(move, 15);
+    clicked = false;
+  } else {
+    clearInterval(t);
+    clicked = true;
+  }
+};
 
 function move() {
   if (right) {

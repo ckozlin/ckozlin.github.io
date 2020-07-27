@@ -1,92 +1,142 @@
+/* MOBILE FIRST DEVELOPMENT */
+/* Want buttons ti stretch across screen and form column instead of row- use flexbox for later modes */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #d6e9fe;
+  flex-wrap: wrap;
+}
+
+.gator-logo {
+  width: 40px;
+  position: absolute;
+}
+
+.logo-container {
+  display: flex;
+  position: relative;
+  height: 30px;
+  margin-bottom: 20px;
+  width: 300px;
+
+  align-items: center;
 }
 
 .page {
-    width: 800px;
-    margin: 0 auto;
-}
-
-.container {
-    background-color: #D6E9FE;
-    overflow: hidden;
-}
-
-h1 {
-    font-size: 80px;
-    padding-top: 50px;
-    padding-bottom: 25px;
-    font-family: 'Slabo 27px', serif;
-}
-
-.button {
-    width: 250px;
-    font-size: 25px;
-    padding: 25px;
-    margin: 10px;
-    border-radius: 15px;
-    background-color: #97caef;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .menu-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  width: 95%;
+  justify-content: center;
+  font-size: 25px;
+  padding: 25px;
+
+  margin: 10px;
+  background-color: #97caef;
+  border-radius: 15px;
 }
 
 .kesem-pic {
-    height: 300px;
-    border-radius: 10px;
-    border: 2px solid black;
-    margin: 20px;
+  height: 300px;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin: 20px;
 }
 
-p, li {
-    font-size: 20px;
-    /* font-family: 'Gentium Basic', serif; */
-
-    margin: 10px 0 25px 0;
+p,
+li {
+  font-size: 20px;
+  /* font-family: 'Gentium Basic', serif; */
+  margin: 10px 0 25px 0;
 }
 
 h2 {
-    font-size: 40px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 ul {
-    list-style-type: square;
+  list-style-type: square;
 }
 
 .bottom-of-page {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .button:visited,
 .button:link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .button:hover {
-    background-color: #7395ae;
-    color: white;
+  background-color: #7395ae;
+  color: white;
 }
 
 .button:active {
-    background-color: #97caef;
+  background-color: #97caef;
 }
 
 .link {
-    text-decoration: none;
-    font-style: italic;
-    font-weight: bold;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .link:hover {
-    text-decoration: underline;
-    color: #bf80ff;
+  text-decoration: underline;
+  color: #bf80ff;
+}
+
+h1 {
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  font-family: "Slabo 27px", serif;
+}
+
+/* TABLET MODE */
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+  .button {
+    width: 40%;
+    flex-direction: row;
+  }
+  .menu-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* DESKTOP MODE */
+@media only screen and (min-width: 961px) {
+  .button {
+    width: 23%;
+    height: 100px;
+    align-items: center;
+    flex-direction: row;
+  }
+  .menu-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 68px;
+  }
 }

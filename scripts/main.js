@@ -1,34 +1,21 @@
-let myImage = document.querySelector('img');
+let gatorLogo = document.querySelector("#gator-logo");
 
-myImage.onclick = function() {
-    let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/mountain2.jpg') {
-        myImage.setAttribute('src', 'images/kesemheadshot.jpg');
-    } else {
-        myImage.setAttribute('src', 'images/mountain2.jpg');
+var t = setInterval(move, 15);
+var pos = 0;
+var right = true;
+
+function move() {
+  if (right) {
+    pos += 1;
+    gatorLogo.style.left = pos + "px";
+    if (pos == 260) {
+      right = false;
     }
-}
-
-let myButton = document.querySelector('button');
-myButton.onclick = function() {
-    setUserName();
-}
-
-let myHeading = document.querySelector('#top');
-
-function setUserName() {
-    let myName = prompt('Please enter your name.');
-    if (!myName) {
-        setUserName();
-    } else {
-        localStorage.setItem('name', myName);
-        myHeading.textContent = 'Welcome to my online portfolio, ' + myName + '!';
+  } else {
+    pos -= 1;
+    gatorLogo.style.left = pos + "px";
+    if (pos == 0) {
+      right = true;
     }
-}
-
-if (!localStorage.getItem('name')) {
-    setUserName();
-}   else {
-    let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Welcome to my online portfolio, ' + storedName + '!';
+  }
 }

@@ -69,3 +69,16 @@ animationToggle.onclick = function () {
     animate_page = true;
   }
 };
+
+/* alert user that github button links to external site */
+gitButton = document.querySelector(".github");
+
+gitButton.onmouseover = function () {
+  gitButton.innerHTML = "Links to external site";
+  gitButton.style.fontSize = 16 + "px";
+};
+
+gitButton.onmouseleave = function () {
+  gitButton.innerHTML = "GitHub";
+  gitButton.style.fontSize = "25px";
+};

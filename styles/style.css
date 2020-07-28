@@ -9,8 +9,8 @@
   flex-wrap: wrap;
 }
 
-.gator-logo {
-  width: 60px;
+.logo {
+  width: 125px;
   position: absolute;
 }
 
@@ -19,11 +19,10 @@
   position: relative;
   height: 30px;
   margin-bottom: 20px;
-  width: 300px;
+  width: 400px;
   margin: auto;
 
   align-items: center;
-  background-color: #fff;
 }
 
 .page {
@@ -53,7 +52,7 @@
   transition: all 1s ease;
 }
 
-.kesem-pic {
+.pic-of-cam {
   width: 200px;
   margin: auto;
   border-radius: 10px;

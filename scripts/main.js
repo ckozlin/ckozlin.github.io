@@ -2,34 +2,16 @@
 
 let gatorLogo = document.querySelector(".logo");
 
-let t = setInterval(move, 15);
+let t_logo = setInterval(move, 20);
 let pos = 0;
-let right = true;
-let clicked = false;
-
-gatorLogo.onclick = function () {
-  if (clicked) {
-    t = setInterval(move, 15);
-    clicked = false;
-  } else {
-    clearInterval(t);
-    clicked = true;
-  }
-};
 
 function move() {
-  if (right) {
+  if (shrink) {
     pos += 1;
     gatorLogo.style.left = pos + "px";
-    if (pos == 200) {
-      right = false;
-    }
   } else {
     pos -= 1;
     gatorLogo.style.left = pos + "px";
-    if (pos == 0) {
-      right = true;
-    }
   }
 }
 
@@ -43,15 +25,47 @@ let images = [
   "images/scenery.jpg",
 ];
 
-let t_img = setInterval(change_image, 15000);
-var i = 0;
+/*Image transitions*/
+let t_transition = setInterval(animate_image, 20);
+let img_height = 200;
+let shrink = true;
+let i = 0;
 
-function change_image() {
-  if (i == images.length - 1) {
-    i = 0;
+function animate_image() {
+  if (shrink) {
+    if (img_height == 0) {
+      if (i < images.length - 1) {
+        i += 1;
+        myImg.src = images[i];
+      } else {
+        i = 0;
+        myImg.src = images[i];
+      }
+      shrink = false;
+    } else {
+      img_height -= 1;
+    }
   } else {
-    i += 1;
+    if (img_height == 200) {
+      shrink = true;
+    } else {
+      img_height += 1;
+    }
   }
 
-  myImg.src = images[i];
+  myImg.style.height = img_height + "px";
 }
+
+let animationToggle = document.querySelector(".animation-toggle");
+let animate_page = true;
+animationToggle.onclick = function () {
+  if (animate_page) {
+    clearInterval(t_transition);
+    clearInterval(t_logo);
+    animate_page = false;
+  } else {
+    t_transition = setInterval(animate_image, 20);
+    t_logo = setInterval(move, 20);
+    animate_page = true;
+  }
+};

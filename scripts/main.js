@@ -20,13 +20,13 @@ let myImg = document.querySelector(".pic-of-cam");
 
 let images = [
   "images/kesemheadshot.jpg",
-  "images/minesweeper_start.png",
+  "images/minesweeper_start.jpg",
   "images/ISS_diagram.jpg",
   "images/mountain2.jpg",
-  "images/minesweeper_mid.png",
+  "images/minesweeper_mid.jpg",
   "images/crab_nebula.jpg",
   "images/scenery.jpg",
-  "images/minesweeper_win.png"
+  "images/minesweeper_win.jpg"
 ];
 
 /*Image transitions*/

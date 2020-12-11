@@ -4,9 +4,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: center;
   background-color: #d6e9fe;
   flex-wrap: wrap;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+#title-logo {
+  color: #4412a1;
 }
 
 .animation-toggle {
@@ -30,6 +38,7 @@
 .logo {
   width: 100px;
   position: absolute;
+  color: #66a3ff;
 }
 
 .logo-box {
@@ -54,6 +63,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .button {
@@ -95,7 +105,7 @@
 .image-carousel-container {
   position: relative;
   display: flex;
-  width: 300px;
+  flex-direction: column;
   height: 200px;
   margin: 20px auto;
 
@@ -107,16 +117,22 @@ p,
 li {
   font-size: 20px;
   /* font-family: 'Gentium Basic', serif; */
-  margin: 10px 0 25px 0;
+  margin: 10px 0 25px;
+  text-align: left;
+}
+
+li {
+  margin: 20px;
 }
 
 h2 {
   font-size: 40px;
   font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: left;
 }
 
 ul {
-  list-style-type: square;
+  list-style-type: disc;
 }
 
 .bottom-of-page {
@@ -155,6 +171,26 @@ h1 {
   font-family: "Slabo 27px", serif;
 }
 
+h3 {
+  font-size: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: left;
+}
+
+.row-of-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.minesweeper {
+  width: 80%;
+  padding-right: 20px;
+  margin: auto;
+}
 /* TABLET MODE */
 @media only screen and (min-width: 601px) and (max-width: 960px) {
   .button {
@@ -165,6 +201,11 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  .minesweeper {
+    width: 40%;
+    padding-right: 20px;
+    margin: auto;
   }
 }
 
@@ -185,5 +226,10 @@ h1 {
 
   h1 {
     font-size: 68px;
+  }
+  .minesweeper {
+    width: 30%;
+    padding-right: 20px;
+    margin: auto;
   }
 }

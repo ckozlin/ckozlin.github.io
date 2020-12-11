@@ -18,6 +18,7 @@ function move() {
 /* Image carousel */
 let myImg = document.querySelector(".pic-of-cam");
 
+/* The images on the carousel*/
 let images = [
   "images/kesemheadshot.jpg",
   "images/minesweeper_start.jpg",

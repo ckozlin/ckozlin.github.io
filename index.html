@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
     />
+    <script src="https://kit.fontawesome.com/73f9b589c3.js" crossorigin="anonymous"></script>
     <link href="styles/style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap"
@@ -24,26 +25,21 @@
   <body>
     <div class="container">
       <div class="page">
-        <h1 class="title">Cameron J. Kozlin</h1>
+        <h1 class="title">Cameron J. Kozlin <i class="fas fa-code-branch" id="title-logo"></i></h1>
 
         <div id="logo-container">
           <div class="logo-box" id="logo-box">
-            <img
-              class="logo"
-              src="images/uf.png"
-              alt="A logo of the University of
-            Florida, written in cursive"
-            />
+            <i class="far fa-folder-open logo fa-5x"></i>
           </div>
         </div>
 
-        <button class="animation-toggle">
-          Click here to toggle all page animations!
+        <button class="animation-toggle">Click here to toggle all page animations!
         </button>
 
         <div class="menu-container">
           <a class="button about-me" href="#about-me">About Me</a>
-          <a class="button involvement" href="#involvement">Involvement</a>
+          <a class="button projects" href="#projects">Projects</a>
+          <a class="button experience" href="#experience">Experience</a>
           <a class="button skills" href="#skills">Skills</a>
           <a
             class="button github"
@@ -52,51 +48,135 @@
             >GitHub</a
           >
         </div>
-
+        <div class="carousel-intro">
+          <p><em>Here is a carousel of images implemented using JavaScript. Some pictures are my own, and all others are freely provided by NASA.
+            Not just to me, but to anyone who wants to use them. It would be cool if they were specifically provided to me though.
+            For lack of a better differentiator, the ones in or depicting outer space belong to NASA, while the ones not pertaining to that are mine.
+        </em></p>
+      </div>
         <div class="image-carousel-container">
+          
           <img
             class="pic-of-cam"
             src="images/kesemheadshot.jpg"
             alt="Carousel of images of Cameron"
           />
         </div>
-
-        <div class="text-block first-text-block">
+        <div class="body-paragraphs">
+          <div class="text-block first-text-block">
           <h2 id="about-me">About Me</h2>
           <p>
-            I'm a second year at the University of Florida, majoring in Computer
-            Science with a minor in Spanish. As I practice my Web Development
-            skills, I am making this website to serve as my online portfolio,
-            and I plan to update it regularly as I learn how to apply new
-            concepts.
+            I'm Cameron Kozlin, a second year Computer Science major at the University of Florida with a minor in Spanish. 
+            As of Summer 2020, I have a 3.94 cumulative Grade Point Average on a 4-point scale.
           </p>
           <p>
-            And, as you may be able to tell by looking at this website, blue is
-            my favorite color.
+            I enjoy Gator football, Star Wars, crosswords, coding, and podcasts. 
+            My Twitter, <a href="https://twitter.com/CameronKozlin" target="_blank" class="link">@CameronKozlin</a>,
+            is pretty much an amalgamation of those five things,
+            so if you share these interests, or want to learn more about me, feel free to check it out!
+          </p>
+            <p>
+            Right now, my favorite programming language is C++,
+            because of its versatility and the beauty of pointers. However, I am always practicing new ones, and willing to learn whatever languages
+            are best suited to approach the problem at hand.
+            </p>
+            <p>
+            At the moment I am mostly focused on backend development. Mastering data structures, algorithm design, and object-oriented 
+            programming
+            is my highest priority. As a result, this website is not the most beautiful portfolio. It is more of an online résumé where I can be a little less formal
+            and a little more myself. That said, I am always ready for a challenge and excited to learn new things, and plan to make this site a masterpiece once I turn my attention to the front-end.
+            </p>
+          <p>
+            My goal is to contribute to software that others around the world
+            can use and enjoy. I take pride in anything I do, and find the thought of software that I am a part of adding convenience and enjoyment to others' lives
+            inspiring. 
+          </p>
+          <p>
+            I believe that my experience, combined with a passion for learning and creating in the field of technology will help me to thrive in any position.
+            Thanks for visiting my online portfolio. Enjoy your stay!
           </p>
         </div>
-
         <div class="text-block">
-          <h2 id="involvement">Involvement</h2>
+          <h2 id="projects">Projects</h2>
+          <p><em>A deep dive into a few of my favorite personal projects</em></p>
+          <h3>AVL Tree</h3>
+          <p>A self-balancing binary search tree</p>
           <ul>
             <li>
-              Counselor for Camp Kesem UF, an organization that holds an annual
-              Summer camp for children whose lives are affected by a parent's
-              cancer
+              Self-balances through 90-degree rotations, which are performed as necessary as each new node is added
             </li>
             <li>
-              Member of General Relief in Prosthetics (GRiP), a club that
-              designs and 3-D prints prosthetics for children
+              Recursive search functionality with time complexity of O(log n)
+            </li>
+          </ul>
+          <h3>Minesweeper</h3>
+          <p>A recreation of the classic computer game</p>
+          <figure class="row-of-images">
+            <img src="images/minesweeper_start.PNG"  class="minesweeper" alt="Minesweeper board as the game begins"/>
+            <img src="images/minesweeper_mid.PNG"  class="minesweeper" alt="Minesweeper board in the middle of the game"/>
+            <img src="images/minesweeper_win.PNG" class="minesweeper" alt="Minesweeper board after winning!"/>
+            <figcaption>Screenshots from my implementation of Minesweeper</figcaption>
+          </figure>
+          <ul>
+            <li>
+              Fully functional, made from scratch using C++ and SFML
             </li>
             <li>
-              I have contributed to research in the field of Computer Science,
-              and was published as a co-author in
-              <a
-                class="link"
-                href="https://ieeexplore.ieee.org/abstract/document/9090481"
-                >this study</a
-              >
+              Utilizes object-oriented programming to track relevant information
             </li>
+            <li>
+              Recursively clears adjacent tiles as appropriate, staying true to one of the game's core features
+            </li>
+          </ul>
+          <h3>PageRank</h3>
+          <p>A simplified webpage ranking system inspired by Larry Page's</p>
+          <ul>
+            <li>
+              Determines ranks from a directed, adjacency-list based graph of webpages
+            </li>
+            <li>
+              Derives a value for each page based on how many other pages reference it, and the value of those pages
+            </li>
+            <li>
+              Scalable: capable of functioning correctly with graphs of large sizes (since the internet is a pretty big place)
+            </li>
+          </ul>
+        </div>
+        <div class="text-block project-section">
+          <h2 id="experience">Experience</h2>
+          <p><em>“You may delay, but time will not.” —Benjamin Franklin</em></p>
+          <h3>Camp Kesem at the University of Florida</h3>
+          <p>An organization that provides a yearly camp for children whose families are affected by cancer</p>
+          <ul>
+            <li>
+              Fundraise to contribute to the camp’s funds so that kids can attend for free
+            </li>
+            <li>
+              Facilitate emotional conversations at camp
+            </li>
+          </ul>
+          <h3>Embodied Learning and Experience (ELX) Lab</h3>
+          <p>Contributed to research at the University of Florida in the field of computer science</p>
+          <ul>
+            <li>
+              Analyzed data collected from experiments to discover trends and draw conclusions         
+            </li>
+            <li>
+              Assisted in writing and editing research papers to submit for publication
+            </li>
+            <li>
+              One such paper was published by IEEE, and I am a co-author. This can be found <a href="https://ieeexplore.ieee.org/abstract/document/9090481" class="link">here</a>
+            </li>
+            <h3>Mathnasium of Brandon</h3>
+            <p>Provided tutoring in mathematics for students ranging between Kindergarten and 12th Grade</p>
+            <ul>
+              <li>
+                Utilized various strategies to encourage student engagement in mathematics
+              </li>
+              <li>
+                Tutored multiple students at a time, responsible for their progress and understanding
+              </li>
+            </ul>
           </ul>
         </div>
 
@@ -104,18 +184,18 @@
           <h2 id="skills">Skills</h2>
           <ul>
             <li>
-              Proficient in C++, Java, and Python
+              C++, Java, Python, HTML, CSS, JavaScript
             </li>
             <li>
-              Learning front-end languages such as HTML, CSS, and JavaScript in
-              my spare time (hence the website)
+              Data structures & algorithms, Object-oriented programming
             </li>
             <li>
-              Always ready to learn new languages, libraries, and programming
-              concepts!
+              Bootstrap, jQuery, Pandas, NumPy, Requests
             </li>
           </ul>
         </div>
+        </div>
+        
 
         <script src="scripts/main.js"></script>
       </div>
